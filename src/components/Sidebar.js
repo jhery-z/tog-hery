@@ -4,12 +4,9 @@ import {
     FaTh,
     FaBars,
     FaUserAlt,
-    FaRegChartBar,
-    FaCommentAlt,
-    FaShoppingBag,
     FaThList
 }from "react-icons/fa";
-import { Container, Row, Col, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 const Sidebar = ({children}) => {
@@ -29,26 +26,6 @@ const Sidebar = ({children}) => {
         {
             path:"/form",
             name:"Form Register",
-            icon:<FaThList/>
-        },
-        {
-            path:"/analytics",
-            name:"Analytics",
-            icon:<FaRegChartBar/>
-        },
-        {
-            path:"/comment",
-            name:"Comment",
-            icon:<FaCommentAlt/>
-        },
-        {
-            path:"/product",
-            name:"Product",
-            icon:<FaShoppingBag/>
-        },
-        {
-            path:"/productList",
-            name:"Product List",
             icon:<FaThList/>
         }
     ]
@@ -75,7 +52,7 @@ const Sidebar = ({children}) => {
                }
            </div>
                 </div>
-                <div className='col-auto'>
+                <div className='col-autos'>
            <main>{children}</main>
 
                 </div>
