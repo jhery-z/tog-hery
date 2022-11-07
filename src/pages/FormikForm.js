@@ -1,4 +1,4 @@
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Form } from 'react-bootstrap';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
     
@@ -38,12 +38,11 @@ import * as Yup from 'yup';
             onSubmit: doregister
         });
         return ( 
-            <div>
-                <Row>
-                    <Col md={{ span: 6 }}>
-                        <h1>Register Form</h1>
-                        <form onSubmit={formik.handleSubmit}>
-                            <div className="form-group">
+      <Row className="justify-content-md-center">
+      <Col md={{ span: 12 }}>
+                        <h3>Register Form</h3>
+                        <Form.Group onSubmit={formik.handleSubmit}>
+                            <div className='form-group'>
                                 <label className="label-required">Username</label>
                                 <input
                                     type="text"
@@ -80,6 +79,7 @@ import * as Yup from 'yup';
                                 {formik.touched.confirmPassword && formik.errors.confirmPassword && <div className="error">{formik.errors.confirmPassword}</div>}
                             </div>
                             <div className="form-group">
+                                <label htmlFor="agreement" className="label-required">I agree to Terms of Services</label>
                                 <input
                                     id="agreement"
                                     type="checkbox"
@@ -87,14 +87,12 @@ import * as Yup from 'yup';
                                     checked={formik.values.agreement}
                                     {...formik.getFieldProps('agreement')}
                                     />
-                                <label htmlFor="agreement" className="label-required">I agree to Terms of Services</label>
                                 {formik.touched.agreement && formik.errors.agreement && <div className="error">{formik.errors.agreement}</div>}
                             </div>
                             <button type="submit" disabled={formik.isSubmitting}>Register</button>
-                        </form>
+                        </Form.Group>
                     </Col>
                 </Row>
-            </div>
          );
     }
      
