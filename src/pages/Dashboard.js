@@ -12,7 +12,7 @@ const Dashboard = () => {
 
   const loadData = async () => {
     setLoading(true);
-    const response = await axios.get("https://jsonplaceholder.typecode.com/comments");
+    const response = await axios.get("https://jsonplaceholder.typicode.com/comments");
     setGridData(response.data);
     setLoading(false);
   };
