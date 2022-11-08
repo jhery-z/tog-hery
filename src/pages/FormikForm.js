@@ -79,7 +79,6 @@ import * as Yup from 'yup';
                                 {formik.touched.confirmPassword && formik.errors.confirmPassword && <div className="error">{formik.errors.confirmPassword}</div>}
                             </div>
                             <div className="form-group">
-                                <label htmlFor="agreement" className="label-required">I agree to Terms of Services</label>
                                 <input
                                     id="agreement"
                                     type="checkbox"
@@ -87,6 +86,7 @@ import * as Yup from 'yup';
                                     checked={formik.values.agreement}
                                     {...formik.getFieldProps('agreement')}
                                     />
+                                <label htmlFor="agreement" className="label-required">I agree to Terms of Services</label>
                                 {formik.touched.agreement && formik.errors.agreement && <div className="error">{formik.errors.agreement}</div>}
                             </div>
                             <button type="submit" disabled={formik.isSubmitting}>Register</button>
