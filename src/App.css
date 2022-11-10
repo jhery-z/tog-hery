@@ -80,7 +80,7 @@ input[type=checkbox] {
   width:unset;
   margin-right:5px;
 }
-button {
+.button-reg {
   width: 100%;
   padding: 10px 0;
   font-weight: bold;

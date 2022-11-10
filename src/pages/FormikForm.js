@@ -89,7 +89,7 @@ import * as Yup from 'yup';
                                 <label htmlFor="agreement" className="label-required">I agree to Terms of Services</label>
                                 {formik.touched.agreement && formik.errors.agreement && <div className="error">{formik.errors.agreement}</div>}
                             </div>
-                            <button type="submit" disabled={formik.isSubmitting}>Register</button>
+                            <button className="button-reg" type="submit" disabled={formik.isSubmitting}>Register</button>
                         </Form.Group>
                     </Col>
                 </Row>

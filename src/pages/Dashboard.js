@@ -17,7 +17,7 @@ const Dashboard = () => {
     setLoading(false);
   };
 
-  console.log("gridData", gridData);
+  
 
   const modifiedData = gridData.map(({body, ...item}) => ({
     ...item,
